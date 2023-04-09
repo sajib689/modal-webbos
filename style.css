@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    
+}
+.card{
+    background-color: #f9f33f;
+    padding: 40px 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+.btn{
+    padding: 5px 15px;
+    margin-top: 10px;
+    background: #ff23e4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.modal-outer {
+    display: grid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: hsla(50, 100%, 50%, 0.7);
+    justify-content: center;
+    align-items: center;
+    /* Hide this modal untill we need it */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2;
+}
+.modal-outer.open{
+    opacity: 1;
+    pointer-events: all;
+}
+.modal-outer img {
+    width: 100%;
+}
+.modal-inner{
+    max-width: 600px;
+    min-width: 400px;
+    padding: 2rem;
+    border-radius: 5px;
+    height: 200px;
+    transform: translateY(-200%);
+    transition: transform 2s;
+}
+.modal-outer.open .modal-inner {
+    transform: translateY(0);
+}
